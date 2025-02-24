@@ -7,6 +7,8 @@ MySQL
 HTML
 Tailwind CSS
 
+![image](https://github.com/user-attachments/assets/f74eb500-d191-44af-86df-e154d72d1788)
+
 Installation Guide
 
 1. Clone this repo - https://github.com/luqmannasir55/blog-app on your local drive
@@ -15,8 +17,10 @@ Installation Guide
 4. Rename .env-example to .env
 5. Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
 6. Run php artisan key:generate
-7. Run php artisan migrate
-8. Run php artisan serve
-9. Open another cmd or terminal, run npm install
-10. Run npm run dev
-11. Go to http://localhost:8000/
+7. Open another cmd or terminal, run composer require laravel/breeze --dev
+8. Run php artisan breeze:install blade (You might need to copy and paste all content in this repo again as this installation might replace some files in your local)
+9. Run php artisan migrate
+10. Run php artisan serve
+11. Open another cmd or terminal, run npm install
+12. Run npm run dev 
+13. Go to http://localhost:8000/
