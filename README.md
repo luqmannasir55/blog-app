@@ -7,7 +7,8 @@ MySQL
 HTML
 Tailwind CSS
 
-![image](https://github.com/user-attachments/assets/f74eb500-d191-44af-86df-e154d72d1788)
+![image](https://github.com/user-attachments/assets/d73da2e5-355a-452e-a7c2-a2beb680f517)
+
 
 Installation Guide
 
