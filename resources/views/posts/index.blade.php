@@ -9,10 +9,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <a href="{{ route('posts.create') }}" 
-                       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Create New Post
-                    </a>
+                    
+                    <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+                        <!-- Search Form -->
+                        <form method="GET" action="{{ route('posts.index') }}" class="mb-4">
+                            <x-text-input type="text" name="search" placeholder="Search posts..." value="{{ request('search') }}" />
+                            <x-primary-button type="submit">Search</x-primary-button>
+                        </form>
+
+                        <a href="{{ route('posts.create') }}" 
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Create New Post
+                        </a>
+                        
+                    </div>
 
                     <div class="mt-6">
                         @foreach ($posts as $post)
@@ -45,6 +56,12 @@
                             </div>
                         @endforeach
                     </div>
+                    
+                    <!-- Pagination Links -->
+                    <div class="mt-4">
+                        {{ $posts->appends(request()->query())->links() }}
+                    </div>
+
                 </div>
             </div>
         </div>

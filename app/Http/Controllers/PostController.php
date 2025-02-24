@@ -13,9 +13,20 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::all();
+        
+        $query = Post::query();
+
+        // Check if there is a search keyword
+        if ($request->has('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%')
+                ->orWhere('content', 'like', '%' . $request->search . '%');
+        }
+
+        // Paginate results (5 posts per page)
+        $posts = $query->latest()->paginate(5);
+
         return view('posts.index', compact('posts'));
     }
 
