@@ -1,4 +1,4 @@
-Exchange Rate Web Application
+Blog Web Application
 
 Tech Stack
 
