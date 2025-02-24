@@ -7,6 +7,8 @@ MySQL
 HTML
 Tailwind CSS
 
+![image](https://github.com/user-attachments/assets/f74eb500-d191-44af-86df-e154d72d1788)
+
 Installation Guide
 
 1. Clone this repo - https://github.com/luqmannasir55/blog-app on your local drive
